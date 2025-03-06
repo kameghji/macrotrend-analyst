@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { formatPercentage } from '../utils/economic-data';
+import { formatPercentage } from '../utils/economic-data.js';
 
 const Chart = ({ data, color, yAxisLabel }) => {
   // Format data for Recharts

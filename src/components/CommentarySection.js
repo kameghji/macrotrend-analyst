@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Card } from './ui/card';
+import { Card } from './ui/card.js';
 
 const CommentarySection = ({ title, commentaries }) => {
   return (

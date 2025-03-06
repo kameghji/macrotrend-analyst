@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { economicData, formatDate } from '../utils/economic-data';
+import { economicData, formatDate } from '../utils/economic-data.js';
 import { Github } from 'lucide-react';
 
 const Header = () => {

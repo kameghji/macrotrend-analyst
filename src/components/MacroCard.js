@@ -1,7 +1,6 @@
-
 import React from 'react';
-import { Card } from './ui/card';
-import TrendIndicator from './TrendIndicator';
+import { Card } from './ui/card.js';
+import TrendIndicator from './TrendIndicator.js';
 
 const MacroCard = ({
   title,
