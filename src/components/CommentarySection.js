@@ -1,17 +1,8 @@
 
 import React from 'react';
-import { Card } from '@/components/ui/card';
+import { Card } from './ui/card';
 
-interface CommentarySectionProps {
-  title: string;
-  commentaries: Array<{
-    text: string;
-    source: string;
-    date: string;
-  }>;
-}
-
-const CommentarySection: React.FC<CommentarySectionProps> = ({ title, commentaries }) => {
+const CommentarySection = ({ title, commentaries }) => {
   return (
     <Card className="data-card">
       <h3 className="text-lg font-medium mb-4">{title}</h3>

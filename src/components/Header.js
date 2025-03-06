@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { economicData, formatDate } from '@/utils/economic-data';
+import { economicData, formatDate } from '../utils/economic-data';
 import { Github } from 'lucide-react';
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <header className="w-full max-w-6xl mx-auto py-8 px-4 sm:px-6">
       <div className="animate-fade-in flex flex-col md:flex-row justify-between items-center mb-6">

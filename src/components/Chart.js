@@ -1,18 +1,9 @@
 
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { formatPercentage } from '@/utils/economic-data';
+import { formatPercentage } from '../utils/economic-data';
 
-interface ChartProps {
-  data: Array<{
-    date: string;
-    value: number;
-  }>;
-  color: string;
-  yAxisLabel: string;
-}
-
-const Chart: React.FC<ChartProps> = ({ data, color, yAxisLabel }) => {
+const Chart = ({ data, color, yAxisLabel }) => {
   // Format data for Recharts
   const chartData = data.map(item => ({
     date: new Date(item.date).toLocaleDateString('en-US', { month: 'short' }),
@@ -47,7 +38,7 @@ const Chart: React.FC<ChartProps> = ({ data, color, yAxisLabel }) => {
             }}
           />
           <Tooltip 
-            formatter={(value: number) => [formatPercentage(value), yAxisLabel]}
+            formatter={(value) => [formatPercentage(value), yAxisLabel]}
             labelFormatter={(label) => `${label}`}
             contentStyle={{ 
               borderRadius: '0.375rem', 

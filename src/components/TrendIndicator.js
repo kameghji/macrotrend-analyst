@@ -2,19 +2,7 @@
 import React from 'react';
 import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
 
-interface TrendIndicatorProps {
-  trend: 'up' | 'down' | 'neutral';
-  type: 'inflation' | 'interest';
-  value: number;
-  animate?: boolean;
-}
-
-const TrendIndicator: React.FC<TrendIndicatorProps> = ({ 
-  trend, 
-  type, 
-  value,
-  animate = true 
-}) => {
+const TrendIndicator = ({ trend, type, value, animate = true }) => {
   const getIcon = () => {
     switch (trend) {
       case 'up':

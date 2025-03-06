@@ -1,28 +1,6 @@
 
-export interface InflationData {
-  date: string;
-  value: number;
-  trend: 'up' | 'down' | 'neutral';
-  commentary: string;
-  source: string;
-}
-
-export interface InterestRateData {
-  date: string;
-  value: number;
-  trend: 'up' | 'down' | 'neutral';
-  commentary: string;
-  source: string;
-}
-
-export interface EconomicData {
-  lastUpdated: string;
-  inflation: InflationData[];
-  interestRates: InterestRateData[];
-}
-
 // Sample data - in a real application, this would be fetched from an API
-export const economicData: EconomicData = {
+export const economicData = {
   lastUpdated: "2023-10-20",
   inflation: [
     {
@@ -115,7 +93,7 @@ export const economicData: EconomicData = {
 };
 
 // Function to get the trend direction for display
-export const getTrendDirection = (trend: 'up' | 'down' | 'neutral'): string => {
+export const getTrendDirection = (trend) => {
   switch (trend) {
     case 'up':
       return '↑';
@@ -127,22 +105,22 @@ export const getTrendDirection = (trend: 'up' | 'down' | 'neutral'): string => {
 };
 
 // Function to get the latest inflation data
-export const getLatestInflation = (): InflationData => {
+export const getLatestInflation = () => {
   return economicData.inflation[0];
 };
 
 // Function to get the latest interest rate data
-export const getLatestInterestRate = (): InterestRateData => {
+export const getLatestInterestRate = () => {
   return economicData.interestRates[0];
 };
 
 // Function to format a date string
-export const formatDate = (dateString: string): string => {
+export const formatDate = (dateString) => {
   const date = new Date(dateString);
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
 };
 
 // Function to format a percentage value
-export const formatPercentage = (value: number): string => {
+export const formatPercentage = (value) => {
   return `${value.toFixed(1)}%`;
 };

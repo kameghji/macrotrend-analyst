@@ -1,10 +1,10 @@
 
 import React, { useEffect, useState } from 'react';
-import Header from '@/components/Header';
-import MacroCard from '@/components/MacroCard';
-import Chart from '@/components/Chart';
-import CommentarySection from '@/components/CommentarySection';
-import { economicData, formatDate, formatPercentage } from '@/utils/economic-data';
+import Header from '../components/Header';
+import MacroCard from '../components/MacroCard';
+import Chart from '../components/Chart';
+import CommentarySection from '../components/CommentarySection';
+import { economicData, formatDate, formatPercentage } from '../utils/economic-data';
 
 const Index = () => {
   const [mounted, setMounted] = useState(false);

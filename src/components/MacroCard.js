@@ -1,22 +1,9 @@
 
 import React from 'react';
-import { Card } from '@/components/ui/card';
+import { Card } from './ui/card';
 import TrendIndicator from './TrendIndicator';
 
-interface MacroCardProps {
-  title: string;
-  value: number;
-  formattedValue: string;
-  date: string;
-  trend: 'up' | 'down' | 'neutral';
-  type: 'inflation' | 'interest';
-  commentary: string;
-  source: string;
-  children?: React.ReactNode;
-  delay?: number;
-}
-
-const MacroCard: React.FC<MacroCardProps> = ({
+const MacroCard = ({
   title,
   value,
   formattedValue,
