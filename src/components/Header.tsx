@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { economicData, formatDate } from '@/utils/economic-data';
+import { Github } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
@@ -10,9 +11,21 @@ const Header: React.FC = () => {
           <p className="text-sm text-muted-foreground mb-1">U.S. Macroeconomic Landscape</p>
           <h1 className="text-3xl font-semibold tracking-tight">Economic Dashboard</h1>
         </div>
-        <div className="mt-4 md:mt-0 text-sm text-right">
-          <p className="text-muted-foreground">Last updated</p>
-          <p className="font-medium">{formatDate(economicData.lastUpdated)}</p>
+        <div className="flex items-center gap-6">
+          <a 
+            href="https://github.com/yourusername/economic-dashboard" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="GitHub Repository"
+          >
+            <Github size={18} />
+            <span className="text-sm font-medium">GitHub</span>
+          </a>
+          <div className="text-sm text-right">
+            <p className="text-muted-foreground">Last updated</p>
+            <p className="font-medium">{formatDate(economicData.lastUpdated)}</p>
+          </div>
         </div>
       </div>
       <div className="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent opacity-50" />
